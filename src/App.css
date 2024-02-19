@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* TodoList */
+
+.todolist .input-group{
+    display: block;
+}
+.todolist .input-group-text,.completeditem .input-group-text{
+    background: transparent;
+    border: none;
+}
+.todolist,.addnewitem,.completeditem{
+  text-align: left;
+}
+.completeditem .input-group-text{
+  text-decoration: line-through;
+}

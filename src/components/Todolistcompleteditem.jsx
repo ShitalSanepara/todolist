@@ -7,7 +7,7 @@ export default function TodoListCompletedItem(props) {
   return (
     <div className="container completeditem">
       <h3>Completed Item</h3>
-      <div class="input-group-text">
+      <div class="input-group">
       {props.completedItem.map((item, index) => (
             <div class="input-group-text">
                 <input

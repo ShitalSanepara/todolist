@@ -40,8 +40,11 @@
 
 /* TodoList */
 
-.todolist .input-group{
+.todolist .input-group,.completeditem .input-group{
     display: block;
+}
+.todolist input,.completeditem input{
+  margin-right: 10px;
 }
 .todolist .input-group-text,.completeditem .input-group-text{
     background: transparent;
@@ -52,4 +55,24 @@
 }
 .completeditem .input-group-text{
   text-decoration: line-through;
+}
+
+.App{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px 10px;
+  border-radius: 10px;
+}
+.addnewitem button{
+  background: #2E2EFF;
+  border: none;
+  padding: 3px 15px;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0 14px;
+}
+.addnewitem input{
+  border-radius: 4px;
+  border: 2px solid #e1e1e1;
 }

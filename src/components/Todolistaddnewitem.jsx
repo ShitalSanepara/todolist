@@ -10,12 +10,12 @@ export default function TodoListAddNewItem(props) {
 
   return (
     <div className="container addnewitem mb-3"> 
-      <h2>Add New Item</h2>
+      <h3>Add New Item</h3>
       <div className="e-float-input e-input-group">
             <input type="text" required={true} value={addToDoTextboxValue} onChange={(e) => setAddToDoTextboxValue(e.target.value)}/>
             <span className="e-float-line"/>
             {/* <label className="e-float-text">Enter Name </label> */}
-            <button onClick={onSubmitTodo}>Submit</button>
+            <button onClick={onSubmitTodo}>Add</button>
         </div>
         
     </div>

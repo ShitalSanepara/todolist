@@ -4,7 +4,7 @@ export default function TodoList(props) {
   return (
     <div>
     <div className="container todolist">
-      <h1>ToDo list</h1>
+      <h3>ToDo list</h3>
       <div class="input-group mb-3">
         {props.todoList.map((item, index) => (
             <div class="input-group-text">

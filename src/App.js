@@ -45,8 +45,8 @@ import React,{useState} from 'react'
   return (
     <div className="App">
       {/* <Navbar title="todo_list"/> */}
-      <TodoList todoList={myToDoList} Check={Check}  />
       <TodoListAddNewItem addNewToDo={addNewToDo} />
+      <TodoList todoList={myToDoList} Check={Check}  />
       <TodoListCompletedItem completedItem={completedItem} Uncheck={Uncheck}/>
     </div>
    

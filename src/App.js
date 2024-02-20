@@ -17,6 +17,26 @@ import React,{useState} from 'react'
     setMyToDoList([...myToDoList, item]);
   }
 
+  
+
+  function Check(item){
+      const index = myToDoList.indexOf(item);
+      if (index > -1) { // only splice array when item is found
+        setMyToDoList(myToDoList.slice(0, index).concat(myToDoList.slice(index+1)));
+      }
+      setCompletedItem([...completedItem, item]);
+      
+  }
+  function Uncheck(item){
+    const index = completedItem.indexOf(item);
+    if (index > -1) { // only splice array when item is found
+      setCompletedItem(completedItem.slice(0, index).concat(completedItem.slice(index+1)));
+    }
+    setMyToDoList([...myToDoList, item]);
+    
+}
+  
+
   // function markToDoCompleted(item){
   //   // console.log(item);
   //   // setCompletedItem([...myToDoList, item]);
@@ -25,9 +45,9 @@ import React,{useState} from 'react'
   return (
     <div className="App">
       {/* <Navbar title="todo_list"/> */}
-      <TodoList todoList={myToDoList} />
+      <TodoList todoList={myToDoList} Check={Check}  />
       <TodoListAddNewItem addNewToDo={addNewToDo} />
-      <TodoListCompletedItem completedItem={completedItem}/>
+      <TodoListCompletedItem completedItem={completedItem} Uncheck={Uncheck}/>
     </div>
    
   );

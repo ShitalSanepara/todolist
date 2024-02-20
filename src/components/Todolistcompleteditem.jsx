@@ -11,6 +11,9 @@ export default function TodoListCompletedItem(props) {
       {props.completedItem.map((item, index) => (
             <div class="input-group-text">
                 <input
+                onClick={
+                  (e) =>props.Uncheck(item)
+                } 
                     class="form-check-input mt-0"
                     type="checkbox"
                     value=""

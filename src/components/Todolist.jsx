@@ -9,6 +9,9 @@ export default function TodoList(props) {
         {props.todoList.map((item, index) => (
             <div class="input-group-text">
                 <input
+                    onClick={
+                      (e) =>props.Check(item)
+                    } 
                     class="form-check-input mt-0"
                     type="checkbox"
                     value=""

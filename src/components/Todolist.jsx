@@ -10,13 +10,18 @@ export default function TodoList(props) {
             <div class="input-group-text">
                 <input
                     onClick={
-                      (e) =>props.Check(item)
+                      (event) => {
+                        props.Check(item)
+                        event.preventDefault();
+                      }
                     } 
                     class="form-check-input mt-0"
                     type="checkbox"
                     value=""
                     aria-label="Checkbox for following text input"
+                    
                 />{item}
+                
             </div>
          ))}
         
